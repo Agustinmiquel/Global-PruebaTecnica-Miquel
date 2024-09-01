@@ -38,9 +38,9 @@ dotenv.config();
 const app = (0, express_1.default)();
 const PORT = 3009;
 app.use(body_parser_1.default.json());
-app.use("/api/user", userRoutes_1.default);
+app.use("/", userRoutes_1.default);
 app.use("/api-docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup((0, swagger_jsdoc_1.default)(swagger_1.swaggerOptions)));
 app.listen(PORT, () => {
     logger_1.default.info(`Puerto escuchandose en http://localhost:${PORT}`);
-    logger_1.default.info(`Documentacion disponible en ${PORT}/api-docs`);
+    logger_1.default.info(`Documentacion disponible en ${process.env.URL}/api-docs`);
 });

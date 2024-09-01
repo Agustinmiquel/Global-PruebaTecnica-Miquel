@@ -51,5 +51,5 @@ exports.swaggerOptions = {
             }
         ]
     },
-    apis: [`${path_1.default.join(__dirname, "../src/routes/userRoutes.ts")}`, `${path_1.default.join(__dirname, '../src/models/Usuarios.ts')}`],
+    apis: [`${path_1.default.join(__dirname, "../src/routes/*.js")}`, `${path_1.default.join(__dirname, '../src/models/*.js')}`],
 };

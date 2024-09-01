@@ -1,5 +1,5 @@
-FROM node:16:alpine
-WORKDIR /usr/src/app
+FROM node:16-alpine
+WORKDIR /src
 COPY package*.json ./
 RUN npm install
 COPY . .

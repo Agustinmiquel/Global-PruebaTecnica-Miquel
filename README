@@ -1,0 +1,25 @@
+### Descripción
+
+Backend para la prueba tecnica para la empresa Global Think.
+
+1. Clonar el repositorio:
+```
+https://github.com/Agustinmiquel/Global-PruebaTecnica-Miquel.git
+```
+2. Instalar las dependencias:
+```
+npm install
+```
+3. Ejecutar en modo de desarrollo:
+```
+npm run dev
+```
+4. Para construir el proyecto:
+```
+npm run build
+```
+5. Para ejecutar en producción:
+```
+npm start
+```
+El servidor estará disponible en `http://localhost:3000`.

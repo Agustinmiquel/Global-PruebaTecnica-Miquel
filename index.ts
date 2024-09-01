@@ -10,11 +10,11 @@ dotenv.config();
 
 const app = express();
 
-const PORT = process.env.URL || 3009;
+const PORT = 3009;
 
 app.use(bodyParser.json());
 
-app.use("/api/user", router);
+app.use("/", router);
 
 
 app.use(
@@ -25,5 +25,5 @@ app.use(
 
 app.listen(PORT, () => {
   logs.info(`Puerto escuchandose en http://localhost:${PORT}`);
-  logs.info(`Documentacion disponible en ${PORT}/api-docs`)
+  logs.info(`Documentacion disponible en ${process.env.URL}/api-docs`)
 });

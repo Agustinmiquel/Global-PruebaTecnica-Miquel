@@ -23,6 +23,6 @@ export const swaggerOptions = {
         }
     ]
   },
-  apis: [`${path.join(__dirname, "../src/routes/userRoutes.ts")}`, `${path.join(__dirname, '../src/models/Usuarios.ts')}`],
+  apis: [`${path.join(__dirname, "../src/routes/*.js")}`, `${path.join(__dirname, '../src/models/*.js')}`],
 };
 
