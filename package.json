@@ -1,0 +1,39 @@
+{
+  "name": "prueba-tecnica-global-agustin",
+  "version": "1.0.0",
+  "description": "prueba tecnica Node.js Typescript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "test": "jest",
+    "dev": "ts-node-dev --respawn --transpile-only index.ts"
+  },
+  "author": "agustin miquel",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dayjs": "^1.11.13",
+    "days": "^1.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-pino-logger": "^7.0.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-typescript": "^7.24.7",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.5.1",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.6",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "pino-pretty": "^11.2.2",
+    "ts-jest": "^29.2.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
+  }
+}
