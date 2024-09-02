@@ -1,28 +1,18 @@
-import * as dotenv from "dotenv";
-dotenv.config();
 import path from 'path';
 
 export const swaggerOptions = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'API de Usuarios - Prueba Global', 
+      title: 'API de Usuarios',
       version: '1.0.0',
-      description: 'API de usuarios de Agustin',
+      description: 'Documentación de la API de Usuarios',
     },
     servers: [
       {
-        url: process.env.URL || 'http://localhost:3009',
-        description: 'Servidor local'
+        url: 'http://localhost:3009',
       },
     ],
-    tags:[
-        {
-            name: 'Users',
-            description: 'Operaciones relacionadas con usuarios',
-        }
-    ]
   },
-  apis: [`${path.join(__dirname, "../src/routes/*.js")}`, `${path.join(__dirname, '../src/models/*.js')}`],
+  apis: [path.join(__dirname, '../src/routes/*.js')], 
 };
-

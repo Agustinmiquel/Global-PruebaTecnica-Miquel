@@ -24,13 +24,18 @@ router.delete('/:id', userController_1.deleteUser);
  *         email:
  *           type: string
  *           description: Email del usuario
+ *         age:
+ *            type: integer
+ *            description: Edad del usuario
  *       required:
  *         - name
  *         - email
+ *         - age
  *       example:
  *         id: 1
  *         name: John Doe
  *         email: johndoe@example.com
+ *         age: 30
  */
 /**
  * @swagger
@@ -61,8 +66,9 @@ router.delete('/:id', userController_1.deleteUser);
  *           schema:
  *             $ref: '#/components/schemas/User'
  *           example:
- *             name: Jane Doe
+ *             name: Agustin
  *             email: janedoe@example.com
+ *             age: 25
  *     responses:
  *       201:
  *         description: Usuario creado exitosamente
@@ -116,8 +122,8 @@ router.delete('/:id', userController_1.deleteUser);
  *           schema:
  *             $ref: '#/components/schemas/User'
  *           example:
- *             name: John Updated
- *             email: johnupdated@example.com
+ *             name: Agu Updated
+ *             email: agumiquel@example.com
  *     responses:
  *       200:
  *         description: Usuario actualizado exitosamente

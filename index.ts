@@ -1,10 +1,10 @@
 import * as dotenv from "dotenv";
 import express, { Request, Response } from "express";
 import bodyParser from "body-parser";
-import router from "./src/routes/userRoutes";
-import logs from "./src/utils/logger";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
+import router from "./src/routes/userRoutes";
+import logs from "./src/utils/logger";
 import { swaggerOptions } from "./config/swagger";
 dotenv.config();
 
@@ -12,16 +12,13 @@ const app = express();
 
 const PORT = 3009;
 
+const swaggerSpec = swaggerJSDoc(swaggerOptions);
+
 app.use(bodyParser.json());
 
-app.use("/", router);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-
-app.use(
-  "/api-docs",
-  swaggerUi.serve,
-  swaggerUi.setup(swaggerJSDoc(swaggerOptions))
-);
+app.use("/users", router);
 
 app.listen(PORT, () => {
   logs.info(`Puerto escuchandose en http://localhost:${PORT}`);
