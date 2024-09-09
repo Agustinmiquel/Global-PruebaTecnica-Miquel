@@ -17,7 +17,9 @@ export const createUser = async (req: Request, res: Response, next: NextFunction
 
 export const getUsers = async (req: Request, res: Response) => {
     try {
-        const users = userService.getUsers();
+        const page = parseInt(req.query.page as string, 10) || 1;
+        const limit = parseInt(req.query.limit as string, 10) || 10;
+        const users = userService.getUsers(page, limit);
         return res.status(200).json(users);
     } catch (error) {
         return res.status(500).json({message: 'Internal server error'});

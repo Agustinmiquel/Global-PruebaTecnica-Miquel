@@ -13,8 +13,8 @@ class UserServie{
         return newUser;
     }
 
-    getUsers():User[]{
-        return this.users;
+    getUsers(limiter:number = 10, offset:number=0):User[]{
+        return this.users.slice(offset, offset + limiter);
     }
 
     getUserById(id:string):User|undefined{
